@@ -17,4 +17,4 @@ reiniciar(): void {
 this.contador.set(0);
 }
 }
-<app-saludo />
+<app-Saludo/>
