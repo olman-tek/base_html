@@ -1,9 +1,9 @@
 import { Component, signal } from '@angular/core';
-
+import { Saludo } from './saludo/saludo';
 
 @Component({
 selector: 'app-root',
-imports: [],
+imports: [Saludo],
 templateUrl: './app.html',
 styleUrl: './app.css'
 })
@@ -17,3 +17,4 @@ reiniciar(): void {
 this.contador.set(0);
 }
 }
+<app-saludo />
