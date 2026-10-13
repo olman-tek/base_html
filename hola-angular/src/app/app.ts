@@ -8,13 +8,13 @@ templateUrl: './app.html',
 styleUrl: './app.css'
 })
 export class App {
-readonly nombre = signal('Angular');
-readonly contador = signal(0);
-incrementar(): void {
-this.contador.update(valor => valor + 1);
+    readonly nombre = signal('Angular');
+    readonly contador = signal(0);
+    
+    incrementar(): void {
+        this.contador.update(valor => valor + 1);
+    }
+    reiniciar(): void {
+        this.contador.set(0);
+    }
 }
-reiniciar(): void {
-this.contador.set(0);
-}
-}
-<app-Saludo/>
