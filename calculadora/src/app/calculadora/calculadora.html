@@ -1,1 +1,23 @@
-<p>calculadora works!</p>
+<div class="calc">
+  <div class="fila">
+    <input type="number" [value]="a()" (input)="actualizarA($any($event.target).value)" />
+    <input type="number" [value]="b()" (input)="actualizarB($any($event.target).value)" />
+  </div>
+
+  <div class="operaciones">
+    @for (op of operaciones; track op) {
+      <button
+        class="pill"
+        [class.activo]="operacion() === op"
+        (click)="elegir(op)"
+      >
+        {{ op }}
+      </button>
+    }
+  </div>
+
+  <p class="resultado">
+    {{ a() }} {{ operacion() }} {{ b() }} =
+    <strong>{{ resultado() ?? 'No se puede dividir entre 0' }}</strong>
+  </p>
+</div>
