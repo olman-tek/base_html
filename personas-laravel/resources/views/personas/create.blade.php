@@ -18,4 +18,4 @@
         <button type="submit">Guardar</button>
         <a href="{{ route('personas.index') }}">Cancelar</a>
     </form>
-@endsection
+@endsection 
